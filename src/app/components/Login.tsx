@@ -30,6 +30,8 @@ const Login = () => {
         storeToken(json.access, "access");
         storeToken(json.refresh, "refresh");
 
+        localStorage.setItem("userEmail", data.email);
+
         router.push("/dashboard");
       })
       .catch(async (error) => {
